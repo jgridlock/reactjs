@@ -36,9 +36,14 @@
         </header>
     </div>
     ```
-## Architecture
+## Architecture Overview
 1. Props + State (Model)
     * These are considered inputs and the difference between them is that state can change. 
 2. Render
-3. DOM (Document Object MOdel)
-    * This is the direct result of rendering the Model
+3. DOM (Document Object Model)
+    * This is the direct result of rendering the Model.
+4. Events
+    * Outputs from DOM that update State
+
+## Components
+* Components are the fundamental units of a react application. Each component corresponds to an element in the DOM. The component is responsible for rendering the content of the element and for handling any events that occur within it. Components can be nested (composing components). Outer components are said to own the inner components.
