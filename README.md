@@ -12,4 +12,4 @@
     * Start the app by changing directories into my-app.
         `npm start`
     * Addition information for react and vscode.
-        [https://code.visualstudio.com/docs/nodejs/reactjs-tutorial]
+        https://code.visualstudio.com/docs/nodejs/reactjs-tutorial
