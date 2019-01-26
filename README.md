@@ -15,7 +15,7 @@
         https://code.visualstudio.com/docs/nodejs/reactjs-tutorial
 
 ## Getting Started
-* First thing that needs to be edited is.
+* First thing that needs to be edited is
     `my-app\src\App.js`
 * Default content:
     ```
@@ -36,3 +36,9 @@
         </header>
     </div>
     ```
+## Architecture
+1. Props + State (Model)
+    * These are considered inputs and the difference between them is that state can change. 
+2. Render
+3. DOM (Document Object MOdel)
+    * This is the direct result of rendering the Model
