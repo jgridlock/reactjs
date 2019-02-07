@@ -4,6 +4,7 @@
 * Setup
     1. Download and install node.js, should come with npm installer.
     2. Verify installation by running the following in a command window:
+    
         `node --version and npm --version`
     3. Install create-react-app:
         `npm install -g create-react-app`
