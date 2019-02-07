@@ -40,4 +40,11 @@
         console.log(typeof unknown);
         // Output: String
         '''
+* Conditions
+    * If
+    ```
+    if (true) {
+    console.log('This message will print!'); 
+    }
+    ```
     
