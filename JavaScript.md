@@ -20,13 +20,13 @@
     * Operators - +, -, *, /, %, +=, -=, *=, /=, ++, --,
     * Concatenation - Combining two strings with +
     * Dot Operator - .toUpperCase(), .startsWith('H'), .trim() (Removes Whitespace), etc..
-        * ie. 'Hello'.length = 5
+        * ie. `'Hello'.length = 5`
         * Additional Dot Operators: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype
-        * ie. Math.floor(Math.random() * 50);
+        * ie. `Math.floor(Math.random() * 50);`
             * Math.random generates a random number between 0 and 1 but we multiply it by 50 so it generates a random number betweeon 0 and 50. Then math.floor rounds the number down to the nearest whole number.
 * Variables
     * var - Keyword that creates, or declares, a new variable. Must use camel casing.
-        * ie. var myName = 'Nick';
+        * ie. `var myName = 'Nick';`
     * let - Keyword that can be reassigned.
     * const - Keyword that can not be reassigned and must be assigned a value when declared.
     * template literals:
@@ -45,6 +45,29 @@
     ```
     if (true) {
     console.log('This message will print!'); 
+    } else if {
+        console.log('Else if, this one!');
+    } else {
+        console.log('Else, this one!`);
     }
     ```
-    
+    * Switch
+    ```
+    switch(moonPhase){
+        case 'full':
+            console.log('Howwwwlll!!');
+            break;
+        case 'mostly full':
+            console.log('Arms and legs are getting hairier');
+            break;
+        case 'mostly new':
+            console.log('Back on two feet');
+            break;
+        default:
+            console.log('Invalid item');
+            break;
+        ```
+    * Operators - === or !===, &&, ||, !
+    * Short circuit evaluation
+        If tool is false then writingUtensil = 'pen'
+        `let writingUtensil = tool || 'pen';`
