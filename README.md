@@ -6,18 +6,21 @@
     2. Verify installation by running the following in a command window:
 
         `node --version and npm --version`
+
     3. Install create-react-app:
 
         `npm install -g create-react-app`
+
     4. Create a new react app where my-app is the app name:
 
         `create-react-app my-app`
+
     5. Start the app by changing directories into my-app:
 
         `cd my-app`
         `npm start`
-    * Addition information for react with vscode
-        https://code.visualstudio.com/docs/nodejs/reactjs-tutorial
+
+    * Addition information for react with vscode: https://code.visualstudio.com/docs/nodejs/reactjs-tutorial
 
 ### Getting Started
 * Get bootstrap for css styling support:
@@ -32,8 +35,8 @@
     5. To verify, open the web application, open developer tools and look at Styles. Boostrap should be the third style sheet.
 * Renaming for consistency:
     1. App.js
-    
-    My-App.js
+
+        My-App.js
     2. App.test.js -> My-App.test.js
     3. index.js -> Replace all App with My-App(Including the import)
     4. App.js -> Replace all App with My-App (Except the import) -> Remove all return content and replace with `<div>My-App</div>`
