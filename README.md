@@ -52,7 +52,7 @@
     4. App.js -> Rename all App within App.js to My-App (Except the import)
     
         Remove all return content and replace with `<div>My-App</div>`
-        
+
 * First thing that needs to be edited is
     `my-app\src\App.js`
 * Default content:
@@ -105,6 +105,28 @@
     }    
 
     ReactDOM.render(<Hello now={new Date().toISOString()} />,
+        document.getElementById('root')
+    );
+    ```
+* Props
+    * Elements representing DOM tags are in lower case. 
+
+    ```
+    ReactDOM.render(<div id="mydiv"></div>,
+        document.getElementById('root')
+    );
+    ```
+    
+    * User defined elements must have identifiers starting with capital letters.
+
+    ```
+    function Sum(props){
+        return (
+            <h1>{props.a} + {props.b} = {props.a + props.b}</h1>
+        );
+    }
+
+    ReactDOM.render(<Sum a={4} b={2} />,
         document.getElementById('root')
     );
     ```
