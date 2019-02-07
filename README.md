@@ -3,12 +3,13 @@
 ### Dev Environment
 * Setup
     1. Download and install node.js, should come with npm installer.
-    2. Verify installation by running the following in a command window.                                     `node --version and npm --version`
-    3. Install create-react-app
+    2. Verify installation by running the following in a command window:
+        `node --version and npm --version`
+    3. Install create-react-app:
         `npm install -g create-react-app`
-    4. Create a new react app where my-app is the app name.
+    4. Create a new react app where my-app is the app name:
         `create-react-app my-app`
-    5. Start the app by changing directories into my-app.
+    5. Start the app by changing directories into my-app:
         `cd my-app`
         `npm start`
     * Addition information for react with vscode
