@@ -1,7 +1,7 @@
 # reactjs
 
 ## Dev Environment
-* create-react-app
+* Setup
     1. Download and install node.js, should come with npm installer.
     2. Verify installation by running the following in a command window.
         `node --version and npm --version`
@@ -47,6 +47,8 @@
         </header>
     </div>
     ```
+
+# Notes
 ## Architecture Overview
 1. Props + State (Model)
     * These are considered inputs and the difference between them is that state can change. 
