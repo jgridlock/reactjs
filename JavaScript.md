@@ -30,18 +30,16 @@
     * let - Keyword that can be reassigned.
     * const - Keyword that can not be reassigned and must be assigned a value when declared.
     * template literals:
-
         ```
         let myPet = 'cat'
         console.log(`I own a pet ${myPet}.`)
         ```
-        
     * typeof - Shows the type of data.
         ```
         let unknown = 'hello';
         console.log(typeof unknown);
         // Output: String
-        '''
+        ```
 * Conditions
     * If
     ```
