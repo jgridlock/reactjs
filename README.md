@@ -1,6 +1,6 @@
 # reactjs
 
-## Dev Environment
+### Dev Environment
 * Setup
     1. Download and install node.js, should come with npm installer.
     2. Verify installation by running the following in a command window.
@@ -15,7 +15,7 @@
     * Addition information for react with vscode
         https://code.visualstudio.com/docs/nodejs/reactjs-tutorial
 
-## Getting Started
+### Getting Started
 * Get bootstrap for css styling support:
     1. Go to https://getbootstrap.com/
     2. Copy the CSS only url and paste into the browser
@@ -49,7 +49,8 @@
     ```
 
 # Notes
-## Architecture Overview
+
+### Architecture Overview
 1. Props + State (Model)
     * These are considered inputs and the difference between them is that state can change. 
 2. Render
@@ -58,7 +59,7 @@
 4. Events
     * Outputs from DOM that update State
 
-## Components
+### Components
 * Components are the fundamental units of a react application. Each component corresponds to an element in the DOM. The component is responsible for rendering the content of the element and for handling any events that occur within it. Components can be nested (composing components). Outer components are said to own the inner components.
 * Note: JSX is the markup language that can be utilized within js code.
 * Defining a Component
