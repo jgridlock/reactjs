@@ -13,6 +13,12 @@
         `npm start`
     * Addition information for react with vscode
         https://code.visualstudio.com/docs/nodejs/reactjs-tutorial
+    * Get bootstrap for css styling support:
+        1. Go to https://getbootstrap.com/
+        2. Copy the CSS only url and paste into the browser. https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css
+        3. Save the CSS file into your project src directory.
+        4. Open App.js and import:
+        `import './bootstrap.min.css';`
 
 ## Getting Started
 * First thing that needs to be edited is
