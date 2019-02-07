@@ -66,7 +66,7 @@
         default:
             console.log('Invalid item');
             break;
-        ```
+    ```
     * Operators - === or !===, &&, ||, !
     * Short circuit evaluation
         If tool is false then writingUtensil = 'pen'
