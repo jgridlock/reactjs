@@ -82,3 +82,29 @@
         favoritePhrase === 'Love That!' ? console.log('I love that!') : console.log("I don't love that!");
         // Output: I love that!
         ```
+* Functions
+    * Basic function
+    ```
+    function getReminder(){
+        console.log('Water the plants.');
+    }
+    ```
+    * Set default parameters
+    ```
+    function greeting (name = 'stranger') {
+        console.log(`Hello, ${name}!`)
+    }
+    ```
+    * If there is no return statement the value is undefined.
+    * Function expressions
+    ```
+    const plantNeedsWater=function(day,plantNeedsWater){
+        if (day === 'Wednesday'){
+            return true
+        } else {
+            return false
+        }
+    }
+
+    plantNeedsWater('Tuesday'); // Output: false
+    ```
