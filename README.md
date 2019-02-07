@@ -25,14 +25,19 @@
 ### Getting Started
 * Get bootstrap for css styling support:
     1. Go to https://getbootstrap.com/
+
     2. Copy the CSS only url and paste into the browser:
 
         https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css
+
     3. Save the CSS file into your project src directory.
+
     4. Open App.js and import:
 
         `import './bootstrap.min.css';`
+
     5. To verify, open the web application, open developer tools and look at Styles. Boostrap should be the third style sheet.
+    
 * Renaming for consistency:
     1. App.js
 
