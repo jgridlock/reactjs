@@ -71,3 +71,14 @@
     * Short circuit evaluation
         If tool is false then writingUtensil = 'pen'
         `let writingUtensil = tool || 'pen';`
+    * Ternary Operator
+        ```
+        let isNightTime = false;
+        isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+        // Output: Turn off the lights!
+        ```
+        ```
+        let favoritePhrase = 'Love That!';
+        favoritePhrase === 'Love That!' ? console.log('I love that!') : console.log("I don't love that!");
+        // Output: I love that!
+        ```
