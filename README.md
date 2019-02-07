@@ -37,14 +37,22 @@
         `import './bootstrap.min.css';`
 
     5. To verify, open the web application, open developer tools and look at Styles. Boostrap should be the third style sheet.
-    
+
 * Renaming for consistency:
-    1. App.js
+    1. Rename App.js to:
 
         My-App.js
-    2. App.test.js -> My-App.test.js
-    3. index.js -> Replace all App with My-App(Including the import)
-    4. App.js -> Replace all App with My-App (Except the import) -> Remove all return content and replace with `<div>My-App</div>`
+
+    2. Rename App.test.js to:
+        
+        My-App.test.js
+
+    3. Rename all App within index.js to My-App(Including the import)
+
+    4. App.js -> Rename all App within App.js to My-App (Except the import)
+    
+        Remove all return content and replace with `<div>My-App</div>`
+        
 * First thing that needs to be edited is
     `my-app\src\App.js`
 * Default content:
