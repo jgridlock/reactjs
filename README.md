@@ -54,8 +54,11 @@
         Remove all return content and replace with `<div>My-App</div>`
 
 * First thing that needs to be edited is
+
     `my-app\src\App.js`
+
 * Default content:
+
     ```
     <div className="App">
         <header className="App-header">
@@ -78,24 +81,37 @@
 # Notes
 
 ### Architecture Overview
+
 1. Props + State (Model)
+
     * These are considered inputs and the difference between them is that state can change. 
+
 2. Render
+
 3. DOM (Document Object Model)
+
     * This is the direct result of rendering the Model.
+
 4. Events
+
     * Outputs from DOM that update State
 
 ### Components
+
 * Components are the fundamental units of a react application. Each component corresponds to an element in the DOM. The component is responsible for rendering the content of the element and for handling any events that occur within it. Components can be nested (composing components). Outer components are said to own the inner components.
+
 * Note: JSX is the markup language that can be utilized within js code.
+
 * Defining a Component
+
     ```
     function Hello(props){
         return <h1>Hello at {props.now}</h1>;
     }
     ```
+
 * Rendering a Component
+
     ```
     import ReactDom from 'react-dom';
     import React from 'react';
@@ -108,7 +124,9 @@
         document.getElementById('root')
     );
     ```
-* Props
+
+* Props - Values that are passed in by a components parent.
+
     * Elements representing DOM tags are in lower case. 
 
     ```
@@ -116,7 +134,7 @@
         document.getElementById('root')
     );
     ```
-    
+
     * User defined elements must have identifiers starting with capital letters.
 
     ```
@@ -130,3 +148,43 @@
         document.getElementById('root')
     );
     ```
+* Class
+
+```
+class Sum extends React.Component {
+    render(){
+        return <h1>
+            {props.a} + {props.b} = {props.a + props.b}
+            </h1>;
+    }
+}
+
+ReactDOM.render(<Sum a={4} b={2} />,
+    document.getElementById('root')
+);
+```
+
+* Component Lifecycle Methods
+
+    * Anything with 'Will' happens before.
+
+        ie. componentWillMount
+
+    * Anything with 'Did' happens after.
+
+        ie. componentDidUpdate
+
+* State - local mutable data that can be created and modified within the component.
+
+* Runtime validation. Can validate the data type, supplied, isinstance or custom validation. This will not stop the running though. This must be installed in the project directory with `npm install prop-types`
+
+```
+import PropTypes from 'prop-types';
+
+Sum.propTypes = {
+    a: PropTypes.number.isRequired,
+    b: PropTypes.number.isRequired,
+};
+```
+
+* 
