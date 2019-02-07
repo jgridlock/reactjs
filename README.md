@@ -4,7 +4,7 @@
 * Setup
     1. Download and install node.js, should come with npm installer.
     2. Verify installation by running the following in a command window:
-    `node --version and npm --version`
+        `node --version and npm --version`
     3. Install create-react-app:
         `npm install -g create-react-app`
     4. Create a new react app where my-app is the app name:
@@ -18,14 +18,17 @@
 ### Getting Started
 * Get bootstrap for css styling support:
     1. Go to https://getbootstrap.com/
-    2. Copy the CSS only url and paste into the browser
+    2. Copy the CSS only url and paste into the browser:
         https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css
     3. Save the CSS file into your project src directory.
-    4. Open App.js and import 
+    4. Open App.js and import:
         `import './bootstrap.min.css';`
     5. To verify, open the web application, open developer tools and look at Styles. Boostrap should be the third style sheet.
 * Renaming for consistency:
-    App.js -> 
+    App.js -> My-App.js
+    App.test.js -> My-App.test.js
+    index.js -> Replace all App with My-App(Including the import)
+    App.js -> Replace all App with My-App (Except the import) -> Remove all return content and replace with `<div>My-App</div>`
 * First thing that needs to be edited is
     `my-app\src\App.js`
 * Default content:
