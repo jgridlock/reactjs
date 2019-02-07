@@ -42,15 +42,15 @@
         ```
 * Conditions
     * If
-    ```
-    if (true) {
-    console.log('This message will print!'); 
-    } else if {
-        console.log('Else if, this one!');
-    } else {
-        console.log('Else, this one!`);
-    }
-    ```
+        ```
+        if (true) {
+        console.log('This message will print!'); 
+        } else if {
+            console.log('Else if, this one!');
+        } else {
+            console.log('Else, this one!`);
+        }
+        ```
     * Switch
     ```
     switch(moonPhase){
