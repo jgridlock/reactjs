@@ -47,6 +47,7 @@
 
 ## Components
 * Components are the fundamental units of a react application. Each component corresponds to an element in the DOM. The component is responsible for rendering the content of the element and for handling any events that occur within it. Components can be nested (composing components). Outer components are said to own the inner components.
+* Note: JSX is the markup language that can be utilized within js code.
 * Defining a Component
     ```
     function Hello(props){
