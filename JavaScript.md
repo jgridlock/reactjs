@@ -84,27 +84,27 @@
         ```
 * Functions
     * Basic function
-    ```
-    function getReminder(){
-        console.log('Water the plants.');
-    }
-    ```
+        ```
+        function getReminder(){
+            console.log('Water the plants.');
+        }
+        ```
     * Set default parameters
-    ```
-    function greeting (name = 'stranger') {
-        console.log(`Hello, ${name}!`)
-    }
-    ```
+        ```
+        function greeting (name = 'stranger') {
+            console.log(`Hello, ${name}!`)
+        }
+        ```
     * If there is no return statement the value is undefined.
     * Function expressions
-    ```
-    const plantNeedsWater=function(day,plantNeedsWater){
-        if (day === 'Wednesday'){
-            return true
-        } else {
-            return false
+        ```
+        const plantNeedsWater=function(day,plantNeedsWater){
+            if (day === 'Wednesday'){
+                return true
+            } else {
+                return false
+            }
         }
-    }
 
-    plantNeedsWater('Tuesday'); // Output: false
-    ```
+        plantNeedsWater('Tuesday'); // Output: false
+        ```
