@@ -114,6 +114,9 @@
             return 'one paramter'
         }
         ```
+        * No parameters need parentheses
+        * One parameter doesnt need parentheses
+        * Two or more needs parentheses
 * Scope
     * Global variables are anything outside of functions and can be accessed from anywhere.
     * Variable's scope stays within code block `{}`.
