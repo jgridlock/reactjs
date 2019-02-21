@@ -121,3 +121,5 @@
     * These are equivalent to python lists `let test = ['cat', 1, true];`
     * If you want to append to an array you can use .push()
     * You can remove the last element of an array with .pop()
+    * NOTE: mutatable functions like .push() can be used to change an array within a function and that change will take place outside of the function as well.
+* Loops
