@@ -108,3 +108,17 @@
 
         plantNeedsWater('Tuesday'); // Output: false
         ```
+    * Arrow function
+        ```
+        const thisExample = (insert) => {
+            return 'one paramter'
+        }
+        ```
+* Scope
+        * Global variables are anything outside of functions and can be accessed from anywhere.
+        * Variable's scope stays within code block `{}`.
+* Arrays
+        * These are equivalent to python lists `let test = ['cat', 1, true];`
+        * If you want to append to an array you can use .push()
+        * You can remove the last element of an array with .pop()
+        
