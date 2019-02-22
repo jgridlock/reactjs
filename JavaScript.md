@@ -126,3 +126,20 @@
     * You can remove the last element of an array with .pop()
     * NOTE: mutatable functions like .push() can be used to change an array within a function and that change will take place outside of the function as well.
 * Loops
+    ```
+    for (let counter = 0; counter < 4; counter++) {
+        console.log(counter);
+    }
+    ```
+    ```
+    for (let i = 0; i < vacationSpots.length; i++) {
+        console.log('I would love to visit ' + vacationSpots[i]);
+    }
+    ```
+    ```
+    let counterTwo = 1;
+    while (counterTwo < 4) {
+        console.log(counterTwo);
+        counterTwo++;
+    }
+    ```
