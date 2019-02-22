@@ -67,7 +67,7 @@
             console.log('Invalid item');
             break;
     ```
-    * Operators - === or !===, &&, ||, !
+    * Operators - === or !==, &&, ||, !
     * Short circuit evaluation
         If tool is false then writingUtensil = 'pen'
         `let writingUtensil = tool || 'pen';`
