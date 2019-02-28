@@ -126,29 +126,65 @@
     * You can remove the last element of an array with .pop()
     * NOTE: mutatable functions like .push() can be used to change an array within a function and that change will take place outside of the function as well.
 * Loops
-    ```
-    for (let counter = 0; counter < 4; counter++) {
-        console.log(counter);
-    }
-    ```
-    ```
-    for (let i = 0; i < vacationSpots.length; i++) {
-        console.log('I would love to visit ' + vacationSpots[i]);
-    }
-    ```
-    ```
-    let counterTwo = 1;
-    while (counterTwo < 4) {
-        console.log(counterTwo);
-        counterTwo++;
-    }
-    ```
-    ```
-    let countString = '';
-    let i = 0;
+    * For
+        ```
+        for (let counter = 0; counter < 4; counter++) {
+            console.log(counter);
+        }
+        ```
+        ```
+        for (let i = 0; i < vacationSpots.length; i++) {
+            console.log('I would love to visit ' + vacationSpots[i]);
+        }
+        ```
+    * While
+        ```
+        let counterTwo = 1;
+        while (counterTwo < 4) {
+            console.log(counterTwo);
+            counterTwo++;
+        }
+        ```
+        ```
+        let countString = '';
+        let i = 0;
 
-    do {
-        countString = countString + i;
-        i++;
-    } while (i < 5);
-    ```
+        do {
+            countString = countString + i;
+            i++;
+        } while (i < 5);
+        ```
+        * Use break when you want to exit the while loop before the condition is met.
+* Higher order functions
+    * In a nut shell you can have functions take in functions as a parameter:
+        ```
+        const checkConsistentOutput = (func, val) => {
+        ```
+* Iterators
+    * .forEach() - loops through every index (sort of like a for i in x)
+    * .map() - The map() method creates a new array with the results of calling a function for every array element.
+    The map() method calls the provided function once for each element in an array, in order.
+        * example:
+        ```
+        const bigNumbers = [100, 200, 300, 400, 500];
+        const smallNumbers = bigNumbers.map(num => num/100);
+
+        output: [1, 2, 3, 4, 5]
+        ```
+    * .filter() - The filter() method creates an array filled with all array elements that pass a test (provided as a function).
+        ```
+        const words = ['chair', 'music', 'pillow', 'brick', 'pen', 'door']; 
+
+        const shortWords = words.filter(word => {
+            return word.length < 6;
+        });
+
+        output: ['chair', 'music', 'brick', 'pen', 'door']
+        ````
+    * .findIndex() - returns index of variable that evaluates to true.
+    * Additiona info:
+        .forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.
+        .map() executes the same code on every element in an array and returns a new array with the updated elements.
+        .filter() checks every element in an array to see if it meets certain criteria and returns a new array with the elements that return truthy for the criteria.
+        .findIndex() returns the index of the first element of an array which satisfies a condition in the callback function. It returns -1 if none of the elements in the array satisfies the condition.
+        .reduce() iterates through an array and takes the values of the elements and returns a single value.
