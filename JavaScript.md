@@ -143,3 +143,12 @@
         counterTwo++;
     }
     ```
+    ```
+    let countString = '';
+    let i = 0;
+
+    do {
+        countString = countString + i;
+        i++;
+    } while (i < 5);
+    ```
