@@ -187,3 +187,16 @@
         * .filter() checks every element in an array to see if it meets certain criteria and returns a new array with the elements that return truthy for the criteria.
         * .findIndex() returns the index of the first element of an array which satisfies a condition in the callback function. It returns -1 if none of the elements in the array satisfies the condition.
         * .reduce() iterates through an array and takes the values of the elements and returns a single value.
+    * Object
+        * Objects are basically Python dictionaries:
+            ```
+            let spaceship = {
+                'Fuel Type': 'diesel',
+                color: 'silver'
+            };
+            ```
+        * Dot notation can be used to access values or bracket notation
+            ```
+            const thisColor = spaceship.color;
+            const fuel = ['Fuel Type'];
+            ```
