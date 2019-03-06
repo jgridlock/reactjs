@@ -208,7 +208,7 @@
             ```
             spaceship.newcolor = 'purple';
             ```
-        * Delte values
+        * Delete values
             ```
             delete sapceship.color;
             ```
