@@ -200,3 +200,15 @@
             const thisColor = spaceship.color;
             const fuel = ['Fuel Type'];
             ```
+        * Change values
+            ```
+            spaceship.color = 'red';   
+            ```
+        * Add values
+            ```
+            spaceship.newcolor = 'purple';
+            ```
+        * Delte values
+            ```
+            delete sapceship.color;
+            ```
