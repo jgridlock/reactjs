@@ -230,4 +230,69 @@
             
             alienShip.takeOff()
             ```
+    * Advanced objects
+        * Use `this` to access objects values within an object:
+            ```
+            const robot = {
+                model: '1E78V2',
+                energyLevel: 100,
+                provideInfo() {
+                    return `I am ${this.model} and my current energy level is ${this.energyLevel}`
+                }
+            };
+            ```
+        * Getter method - get values inside of objects
+            ```
+            const robot = {
+            _model: '1E78V2',
+            _energyLevel: 100,
+            get energyLevel() {
+                if (typeof this._energyLevel === 'number'){
+                return `My current energy level is ${this._energyLevel}`
+                } else {
+                return 'System malfunction: cannot retrieve energy level'
+                }
+            }
+            };
+
+            console.log(robot.energyLevel)
+            ```
+        * Setter method - set values inside of objects
+            ```
+            set energyLevel(){
+                some code..
+            }
+
+            robot.energyLevel = 200
+            ```
+        * Factory functions - functions that create objects based on inputs
+            ```
+            const robotFactory = (model, mobile) => {
+                return {
+                    model: model,
+                    mobile: mobile,
+                    beep() {
+                    console.log('Beep Boop')
+                    }
+                } 
+            }
+            ```
+        * Destructured assignment - shorthand object assignment
+            ```
+            const robot = {
+            model: '1E78V2',
+            energyLevel: 100,
+            functionality: {
+                beep() {
+                console.log('Beep Boop');
+                },
+                fireLaser() {
+                console.log('Pew Pew');
+                },
+            }
+            };
+
+            const { functionality } = robot
+            functionality.beep()
+            ```
         * 
