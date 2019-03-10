@@ -308,7 +308,7 @@
             console.log(halley.name); // Log the name value saved to halley
             // Output: 'Halley'
             ```
-        * Full class example with get.
+        * Full class example with get and accessing instances.
             ```
             class Surgeon {
                 constructor(name, department) {
@@ -336,4 +336,7 @@
 
                 const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
                 const surgeonDurant = new Surgeon('Durant', 'Orthopedics');
+
+                console.log(surgeonCurry.takeVacationDays(3))
+                console.log(surgeonCurry.remainingVacationDays)
             ```
