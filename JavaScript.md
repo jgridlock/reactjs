@@ -371,3 +371,11 @@
 
             const nurseOlynyk = new Nurse('Olynyk',['Trauma', 'Pediatrics'])
             ```
+        * Static methods can only be accessed by calling the Class.method. They can not be accessed from an instance. This example would be within a class.
+            ```
+              static generatePassword(){
+                const randomNumber = Math.floor(Math.random()*10000);
+                return randomNumber
+            }
+            ```
+        
