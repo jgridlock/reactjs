@@ -340,3 +340,34 @@
                 console.log(surgeonCurry.takeVacationDays(3))
                 console.log(surgeonCurry.remainingVacationDays)
             ```
+        * `super` inherits a variable from the parent class. `new` creates a new instance. Use `extends` to create a child class.
+            ```
+            class HospitalEmployee {
+                constructor(name) {
+                    this._name = name;
+                    this._remainingVacationDays = 20;
+                }
+                
+                get name() {
+                    return this._name;
+                }
+                
+                get remainingVacationDays() {
+                    return this._remainingVacationDays;
+                }
+                
+                takeVacationDays(daysOff) {
+                    this._remainingVacationDays -= daysOff;
+                }
+            }
+
+            class Nurse extends HospitalEmployee {
+                constructor(name, certifications){
+                    super(name);
+                    this._certifications = certifications;
+                    this._remainingVacationDays = 20;
+                }
+            }
+
+            const nurseOlynyk = new Nurse('Olynyk',['Trauma', 'Pediatrics'])
+            ```
