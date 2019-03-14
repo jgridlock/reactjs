@@ -378,4 +378,9 @@
                 return randomNumber
             }
             ```
-        
+        * Some notes
+            * Constructors are created for variables that are going to be accessed in sub classes.
+            * Anything with a `this.` in front of it is a property.
+            * Getters all you to access properties outside of the class.
+            * Setters allow you to change those properties from outside of a class.
+            * Methods are used to call getters and setters.
