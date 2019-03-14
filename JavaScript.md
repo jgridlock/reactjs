@@ -384,18 +384,21 @@
             * Getters all you to access properties outside of the class.
             * Setters allow you to change those properties from outside of a class.
             * Methods are used to call getters and setters.
-    * Modules0
-        * The pattern we use to export modules is thus:
-            Define an object to represent the module.
-            Add data or behavior to the module.
-            Export the module.
-        * Example:
-            ```
-            let Airplane = {};
-            Airplane.myAirplane = 'StarJet';
-            module.exports = Airplane;
-            ```
-        * Import a module with require:
-            ```
-            const Menu = require('./menu.js');
-            ```
+    * Modules
+        * ES5
+            * The pattern we use to export modules is thus:
+                Define an object to represent the module.
+                Add data or behavior to the module.
+                Export the module.
+            * Example:
+                ```
+                let Airplane = {};
+                Airplane.myAirplane = 'StarJet';
+                module.exports = Airplane;
+                ```
+            * Import a module with require:
+                ```
+                const Menu = require('./menu.js');
+                ```
+        * ES6
+            *
