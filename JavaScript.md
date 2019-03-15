@@ -435,4 +435,17 @@
             Fulfilled: The operation has completed successfully and the promise now has a resolved value. For example, a request’s promise might resolve with a JSON object as its value.
             Rejected: The operation has failed and the promise has a reason for the failure. This reason is usually an Error of some kind.
             ```
-        * 
+        * Function example, use resolve or reject for pass or fail:
+            ```
+            function myExecutor(resolve, reject){
+                if (inventory.sunglasses > 0){
+                    resolve('Sunglasses order processed.')
+                } else {
+                    reject('That item is sold out.')
+                }
+            }
+            ```
+        * We can expand on this with then statements:
+            ```
+            prom.then(handleSuccess, handleFailure);
+            ```
