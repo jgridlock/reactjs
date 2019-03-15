@@ -401,4 +401,30 @@
                 const Menu = require('./menu.js');
                 ```
         * ES6
-            *
+            * Exporting modules:
+                ```
+                export default moduleName;
+                ```
+            * Importing modules:
+                ```
+                import Airplane from './airplane';
+                ```
+            * Exporting specific functions or variables:
+                ```
+                export { specialty, isVegetarian };
+                ```
+            * Importing specific functions or variables:
+                ```
+                import { availableAirplanes, flightRequirements, meetsStaffRequirements } from './airplane';
+                ```
+            * Importing as:
+                ```
+                import * as Carte from './menu';
+
+                Carte.chefsSpecial;
+                Carte.isVeg();
+                Carte.isLowSodium();
+                ```
+                ```
+                import { chefsSpecial as isVeg } from './menu';
+                ```
