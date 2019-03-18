@@ -449,3 +449,47 @@
             ```
             prom.then(handleSuccess, handleFailure);
             ```
+    * Promises in ES8.
+        * example:
+            ```
+            async function withAsync(num){
+            if (num === 0){
+                return 'zero';
+                } else {
+                return 'not zero';
+                }
+            }
+
+            withAsync(100)
+            .then((resolveValue) => {
+            console.log(` withAsync(100) returned a promise which resolved to: ${resolveValue}.`);
+            })
+            ```
+    * Requests
+        * example:
+            ```
+            const xhr = new XMLHttpRequest();
+            const url = "https://api-to-call.com/endpoint";
+            xhr.responseType = 'json';
+            xhr.onreadystatechange = () => {
+            if (xhr.readyState === XMLHttpRequest.DONE){
+                return xhr.response;
+            }
+            }
+
+            xhr.open('GET', url);
+            xhr.send();
+            ```
+        * GET request with fetch:
+            ```
+            fetch('https://api-to-call.com/endpoint').then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error('Request failed!');
+            }, networkError => {
+            console.log(networkError.message);
+            }).then(jsonResponse => {
+            return jsonResponse;
+            });
+            ```
