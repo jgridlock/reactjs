@@ -181,315 +181,316 @@
         output: ['chair', 'music', 'brick', 'pen', 'door']
         ````
     * .findIndex() - returns index of variable that evaluates to true.
-    * Additiona info:
+    * Additional info:
         * .forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.
         * .map() executes the same code on every element in an array and returns a new array with the updated elements.
         * .filter() checks every element in an array to see if it meets certain criteria and returns a new array with the elements that return truthy for the criteria.
         * .findIndex() returns the index of the first element of an array which satisfies a condition in the callback function. It returns -1 if none of the elements in the array satisfies the condition.
         * .reduce() iterates through an array and takes the values of the elements and returns a single value.
-    * Object
-        * Objects are basically Python dictionaries:
-            ```
-            let spaceship = {
-                'Fuel Type': 'diesel',
-                color: 'silver'
-            };
-            ```
-        * Dot notation can be used to access values or bracket notation
-            ```
-            const thisColor = spaceship.color;
-            const fuel = ['Fuel Type'];
-            ```
-        * Change values
-            ```
-            spaceship.color = 'red';   
-            ```
-        * Add values
-            ```
-            spaceship.newcolor = 'purple';
-            ```
-        * Delete values
-            ```
-            delete sapceship.color;
-            ```
-        * Objects inside of functions
-            ```
-            let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
+* Object
+    * Objects are basically Python dictionaries:
+        ```
+        let spaceship = {
+            'Fuel Type': 'diesel',
+            color: 'silver'
+        };
+        ```
+    * Dot notation can be used to access values or bracket notation
+        ```
+        const thisColor = spaceship.color;
+        const fuel = ['Fuel Type'];
+        ```
+    * Change values
+        ```
+        spaceship.color = 'red';   
+        ```
+    * Add values
+        ```
+        spaceship.newcolor = 'purple';
+        ```
+    * Delete values
+        ```
+        delete sapceship.color;
+        ```
+    * Objects inside of functions
+        ```
+        let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
 
-            // Write your code below
-            const alienShip = {
-                retreat() {
-                    console.log(retreatMessage)
-                },
-                takeOff() {
-                    console.log('Blast off')
-                }
-            };
-
-            alienShip.retreat()
-            
-            alienShip.takeOff()
-            ```
-    * Advanced objects
-        * Use `this` to access objects values within an object:
-            ```
-            const robot = {
-                model: '1E78V2',
-                energyLevel: 100,
-                provideInfo() {
-                    return `I am ${this.model} and my current energy level is ${this.energyLevel}`
-                }
-            };
-            ```
-        * Getter method - get values inside of objects
-            ```
-            const robot = {
-            _model: '1E78V2',
-            _energyLevel: 100,
-            get energyLevel() {
-                if (typeof this._energyLevel === 'number'){
-                return `My current energy level is ${this._energyLevel}`
-                } else {
-                return 'System malfunction: cannot retrieve energy level'
-                }
+        // Write your code below
+        const alienShip = {
+            retreat() {
+                console.log(retreatMessage)
+            },
+            takeOff() {
+                console.log('Blast off')
             }
-            };
+        };
 
-            console.log(robot.energyLevel)
-            ```
-        * Setter method - set values inside of objects
-            ```
-            set energyLevel(){
-                some code..
-            }
-
-            robot.energyLevel = 200
-            ```
-        * Factory functions - functions that create objects based on inputs
-            ```
-            const robotFactory = (model, mobile) => {
-                return {
-                    model: model,
-                    mobile: mobile,
-                    beep() {
-                    console.log('Beep Boop')
-                    }
-                } 
-            }
-            ```
-        * Destructured assignment - shorthand object assignment
-            ```
-            const robot = {
+        alienShip.retreat()
+        
+        alienShip.takeOff()
+        ```
+* Advanced objects
+    * Use `this` to access objects values within an object:
+        ```
+        const robot = {
             model: '1E78V2',
             energyLevel: 100,
-            functionality: {
+            provideInfo() {
+                return `I am ${this.model} and my current energy level is ${this.energyLevel}`
+            }
+        };
+        ```
+    * Getter method - get values inside of objects
+        ```
+        const robot = {
+        _model: '1E78V2',
+        _energyLevel: 100,
+        get energyLevel() {
+            if (typeof this._energyLevel === 'number'){
+            return `My current energy level is ${this._energyLevel}`
+            } else {
+            return 'System malfunction: cannot retrieve energy level'
+            }
+        }
+        };
+
+        console.log(robot.energyLevel)
+        ```
+    * Setter method - set values inside of objects
+        ```
+        set energyLevel(){
+            some code..
+        }
+
+        robot.energyLevel = 200
+        ```
+    * Factory functions - functions that create objects based on inputs
+        ```
+        const robotFactory = (model, mobile) => {
+            return {
+                model: model,
+                mobile: mobile,
                 beep() {
-                console.log('Beep Boop');
-                },
-                fireLaser() {
-                console.log('Pew Pew');
-                },
-            }
-            };
+                console.log('Beep Boop')
+                }
+            } 
+        }
+        ```
+    * Destructured assignment - shorthand object assignment
+        ```
+        const robot = {
+        model: '1E78V2',
+        energyLevel: 100,
+        functionality: {
+            beep() {
+            console.log('Beep Boop');
+            },
+            fireLaser() {
+            console.log('Pew Pew');
+            },
+        }
+        };
 
-            const { functionality } = robot
-            functionality.beep()
-            ```
-    * Classes
-        * Constructor is like init. Use `new` to create an instance of a class.
-            ```
-            class Dog {
-                constructor(name) {
-                    this.name = name;
-                    this.behavior = 0;
-                }
+        const { functionality } = robot
+        functionality.beep()
+        ```
+* Classes
+    * Constructor is like init. Use `new` to create an instance of a class.
+        ```
+        class Dog {
+            constructor(name) {
+                this.name = name;
+                this.behavior = 0;
             }
-            const halley = new Dog('Halley'); // Create new Dog instance
-            console.log(halley.name); // Log the name value saved to halley
-            // Output: 'Halley'
-            ```
-        * Full class example with get and accessing instances.
-            ```
-            class Surgeon {
-                constructor(name, department) {
-                    this._name = name;
-                    this._department = department;
-                    this._remainingVacationDays = 20;
-                }
-                
-                get name() {
-                    return this._name;
-                }
-                
-                get department() {
-                    return this._department;
-                }
-                
-                get remainingVacationDays() {
-                    return this._remainingVacationDays;
-                }
-                
-                takeVacationDays(daysOff) {
-                    this._remainingVacationDays -= daysOff;
-                }
-                }
-
-                const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
-                const surgeonDurant = new Surgeon('Durant', 'Orthopedics');
-
-                console.log(surgeonCurry.takeVacationDays(3))
-                console.log(surgeonCurry.remainingVacationDays)
-            ```
-        * `super` inherits a variable from the parent class. `new` creates a new instance. Use `extends` to create a child class.
-            ```
-            class HospitalEmployee {
-                constructor(name) {
-                    this._name = name;
-                    this._remainingVacationDays = 20;
-                }
-                
-                get name() {
-                    return this._name;
-                }
-                
-                get remainingVacationDays() {
-                    return this._remainingVacationDays;
-                }
-                
-                takeVacationDays(daysOff) {
-                    this._remainingVacationDays -= daysOff;
-                }
+        }
+        const halley = new Dog('Halley'); // Create new Dog instance
+        console.log(halley.name); // Log the name value saved to halley
+        // Output: 'Halley'
+        ```
+    * Full class example with get and accessing instances.
+        ```
+        class Surgeon {
+            constructor(name, department) {
+                this._name = name;
+                this._department = department;
+                this._remainingVacationDays = 20;
             }
-
-            class Nurse extends HospitalEmployee {
-                constructor(name, certifications){
-                    super(name);
-                    this._certifications = certifications;
-                    this._remainingVacationDays = 20;
-                }
+            
+            get name() {
+                return this._name;
             }
-
-            const nurseOlynyk = new Nurse('Olynyk',['Trauma', 'Pediatrics'])
-            ```
-        * Static methods can only be accessed by calling the Class.method. They can not be accessed from an instance. This example would be within a class.
-            ```
-              static generatePassword(){
-                const randomNumber = Math.floor(Math.random()*10000);
-                return randomNumber
+            
+            get department() {
+                return this._department;
             }
-            ```
-        * Some notes
-            * Constructors are created for variables that are going to be accessed in sub classes.
-            * Anything with a `this.` in front of it is a property.
-            * Getters all you to access properties outside of the class.
-            * Setters allow you to change those properties from outside of a class.
-            * Methods are used to call getters and setters.
-    * Modules
-        * ES5
-            * The pattern we use to export modules is thus:
-                Define an object to represent the module.
-                Add data or behavior to the module.
-                Export the module.
-            * Example:
-                ```
-                let Airplane = {};
-                Airplane.myAirplane = 'StarJet';
-                module.exports = Airplane;
-                ```
-            * Import a module with require:
-                ```
-                const Menu = require('./menu.js');
-                ```
-        * ES6
-            * Exporting modules:
-                ```
-                export default moduleName;
-                ```
-            * Importing modules:
-                ```
-                import Airplane from './airplane';
-                ```
-            * Exporting specific functions or variables:
-                ```
-                export { specialty, isVegetarian };
-                ```
-            * Importing specific functions or variables:
-                ```
-                import { availableAirplanes, flightRequirements, meetsStaffRequirements } from './airplane';
-                ```
-            * Importing as:
-                ```
-                import * as Carte from './menu';
-
-                Carte.chefsSpecial;
-                Carte.isVeg();
-                Carte.isLowSodium();
-                ```
-                ```
-                import { chefsSpecial as isVeg } from './menu';
-                ```
-    * Promises - Allow for async operation.
-        * States:
-            ```
-            Pending: The initial state— the operation has not completed yet.
-            Fulfilled: The operation has completed successfully and the promise now has a resolved value. For example, a request’s promise might resolve with a JSON object as its value.
-            Rejected: The operation has failed and the promise has a reason for the failure. This reason is usually an Error of some kind.
-            ```
-        * Function example, use resolve or reject for pass or fail:
-            ```
-            function myExecutor(resolve, reject){
-                if (inventory.sunglasses > 0){
-                    resolve('Sunglasses order processed.')
-                } else {
-                    reject('That item is sold out.')
-                }
+            
+            get remainingVacationDays() {
+                return this._remainingVacationDays;
             }
-            ```
-        * We can expand on this with then statements:
-            ```
-            prom.then(handleSuccess, handleFailure);
-            ```
-    * Promises in ES8.
-        * example:
-            ```
-            async function withAsync(num){
-            if (num === 0){
-                return 'zero';
-                } else {
-                return 'not zero';
-                }
-            }
-
-            withAsync(100)
-            .then((resolveValue) => {
-            console.log(` withAsync(100) returned a promise which resolved to: ${resolveValue}.`);
-            })
-            ```
-    * Requests
-        * example:
-            ```
-            const xhr = new XMLHttpRequest();
-            const url = "https://api-to-call.com/endpoint";
-            xhr.responseType = 'json';
-            xhr.onreadystatechange = () => {
-            if (xhr.readyState === XMLHttpRequest.DONE){
-                return xhr.response;
+            
+            takeVacationDays(daysOff) {
+                this._remainingVacationDays -= daysOff;
             }
             }
 
-            xhr.open('GET', url);
-            xhr.send();
-            ```
-        * GET request with fetch:
-            ```
-            fetch('https://api-to-call.com/endpoint').then(response => {
-            if (response.ok) {
-                return response.json();
+            const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
+            const surgeonDurant = new Surgeon('Durant', 'Orthopedics');
+
+            console.log(surgeonCurry.takeVacationDays(3))
+            console.log(surgeonCurry.remainingVacationDays)
+        ```
+    * `super` inherits a variable from the parent class. `new` creates a new instance. Use `extends` to create a child class.
+        ```
+        class HospitalEmployee {
+            constructor(name) {
+                this._name = name;
+                this._remainingVacationDays = 20;
             }
-            throw new Error('Request failed!');
-            }, networkError => {
-            console.log(networkError.message);
-            }).then(jsonResponse => {
-            return jsonResponse;
-            });
+            
+            get name() {
+                return this._name;
+            }
+            
+            get remainingVacationDays() {
+                return this._remainingVacationDays;
+            }
+            
+            takeVacationDays(daysOff) {
+                this._remainingVacationDays -= daysOff;
+            }
+        }
+
+        class Nurse extends HospitalEmployee {
+            constructor(name, certifications){
+                super(name);
+                this._certifications = certifications;
+                this._remainingVacationDays = 20;
+            }
+        }
+
+        const nurseOlynyk = new Nurse('Olynyk',['Trauma', 'Pediatrics'])
+        ```
+    * Static methods can only be accessed by calling the Class.method. They can not be accessed from an instance. This example would be within a class.
+        ```
+            static generatePassword(){
+            const randomNumber = Math.floor(Math.random()*10000);
+            return randomNumber
+        }
+        ```
+    * Some notes
+        * Constructors are created for variables that are going to be accessed in sub classes.
+        * Anything with a `this.` in front of it is a property.
+        * Getters all you to access properties outside of the class.
+        * Setters allow you to change those properties from outside of a class.
+        * Methods are used to call getters and setters.
+* Modules
+    * ES5
+        * The pattern we use to export modules is thus:
+            Define an object to represent the module.
+            Add data or behavior to the module.
+            Export the module.
+        * Example:
             ```
+            let Airplane = {};
+            Airplane.myAirplane = 'StarJet';
+            module.exports = Airplane;
+            ```
+        * Import a module with require:
+            ```
+            const Menu = require('./menu.js');
+            ```
+    * ES6
+        * Exporting modules:
+            ```
+            export default moduleName;
+            ```
+        * Importing modules:
+            ```
+            import Airplane from './airplane';
+            ```
+        * Exporting specific functions or variables:
+            ```
+            export { specialty, isVegetarian };
+            ```
+        * Importing specific functions or variables:
+            ```
+            import { availableAirplanes, flightRequirements, meetsStaffRequirements } from './airplane';
+            ```
+        * Importing as:
+            ```
+            import * as Carte from './menu';
+
+            Carte.chefsSpecial;
+            Carte.isVeg();
+            Carte.isLowSodium();
+            ```
+            ```
+            import { chefsSpecial as isVeg } from './menu';
+            ```
+* Promises - Allow for async operation.
+    * States:
+        ```
+        Pending: The initial state— the operation has not completed yet.
+        Fulfilled: The operation has completed successfully and the promise now has a resolved value. For example, a request’s promise might resolve with a JSON object as its value.
+        Rejected: The operation has failed and the promise has a reason for the failure. This reason is usually an Error of some kind.
+        ```
+    * Function example, use resolve or reject for pass or fail:
+        ```
+        function myExecutor(resolve, reject){
+            if (inventory.sunglasses > 0){
+                resolve('Sunglasses order processed.')
+            } else {
+                reject('That item is sold out.')
+            }
+        }
+        ```
+    * We can expand on this with then statements:
+        ```
+        prom.then(handleSuccess, handleFailure);
+        ```
+* Promises in ES8.
+    * example:
+        ```
+        async function withAsync(num){
+        if (num === 0){
+            return 'zero';
+            } else {
+            return 'not zero';
+            }
+        }
+
+        withAsync(100)
+        .then((resolveValue) => {
+        console.log(` withAsync(100) returned a promise which resolved to: ${resolveValue}.`);
+        })
+        ```
+* Requests
+    * example:
+        ```
+        const xhr = new XMLHttpRequest();
+        const url = "https://api-to-call.com/endpoint";
+        xhr.responseType = 'json';
+        xhr.onreadystatechange = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE){
+            return xhr.response;
+        }
+        }
+
+        xhr.open('GET', url);
+        xhr.send();
+        ```
+    * GET request with fetch:
+        ```
+        fetch('https://api-to-call.com/endpoint').then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error('Request failed!');
+        }, networkError => {
+        console.log(networkError.message);
+        }).then(jsonResponse => {
+        return jsonResponse;
+        });
+        ```
+# JSX/ReactJS
