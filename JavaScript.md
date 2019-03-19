@@ -560,4 +560,51 @@
     * Event listener: https://reactjs.org/docs/events.html#supported-events
         * Even listeners should start with the word on then end in the event `onClick`
     * Conditionals
-        
+        * Do the conditionals outside of the JSX:
+            ```
+            if (coinToss() === 'heads') {
+                img = (
+                    <img src={pics.kitty} />
+                );
+            } else {
+                img = ( 
+                    <img src={pics.doggy} />
+                );
+            }
+            ```
+        * Ternary Operator - `x ? y : z` if x is true execute y else do z
+            ```
+            const headline = (
+            <h1>
+                { age >= drinkingAge ? 'Buy Drink' : 'Do Teen Stuff' }
+            </h1>
+            );
+            ```
+            * NOTE: && can be used to happen or not happen at all
+        * Map - use .map() instead of arrays for JSX:
+            ```
+            const strings = ['Home', 'Shop', 'About Me'];
+
+            const listItems = strings.map(string => <li>{string}</li>);
+
+            <ul>{listItems}</ul>
+
+            // This is fine in JSX, not in an explicit array:
+
+            <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            </ul>
+
+            // This is also fine!
+
+            const liArray = [
+            <li>item 1</li>, 
+            <li>item 2<li>, 
+            <li>item 3</li>
+            ];
+
+            <ul>{liArray}</ul>
+            ```
+        * Key
