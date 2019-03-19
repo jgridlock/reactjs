@@ -494,3 +494,66 @@
         });
         ```
 # JSX/ReactJS
+
+* JSX
+    * Basic units are called elements. JSX is HTML inside of a JS file.
+    * JSX elements can be saved just like JS variables:
+        ```
+        const navBar = <nav>I am a nav bar</nav>;
+
+        const myTeam = {
+            center: <li>Benzo Walli</li>,
+            powerForward: <li>Rasha Loa</li>,
+            smallForward: <li>Tayshaun Dasmoto</li>,
+            shootingGuard: <li>Colmar Cumberbatch</li>,
+            pointGuard: <li>Femi Billon</li>
+        };
+        ```
+    * JSX elements can have attributes just like HTML.
+        ```
+        const p1 = <p id="large">foo</p>
+        const p2 = <p id="small">bar</p>
+        ```
+    * You can nest JSX elements just like in HTML. If it is multi line it should look like:
+        ```
+         const theExample = (
+            <a href="https://www.example.com">
+                <h1>
+                Click me!
+                </h1>
+            </a>
+        );
+        ```
+    * NOTE: The first opening tag and the final closing tag of a JSX expression must belong to the same JSX element! This can be fixed by wrapping the expression in a <div>
+    * Rendering - ReactDOM is a library that contains many specific methods. The first argument should be a JSX expression or a variable that evaluates to a JSX expression. The second element is where that JSX expression is going to get appended to.
+        ```
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+
+        // This is just an example, switch to app.js for the exercise.
+        ReactDOM.render(<h1>Hello world</h1>, document.getElementById('app'));
+        ```
+    * NOTE: React will not update if there is no change in the variable.
+    * NOTE: HTML `class` attribute has to be `className` because `class` is reserved in JS.
+    * NOTE: HTML self closing tags needs a `/` so `<br>` should be `<br />`.
+    * If you add something between `{}` it will execute as JavaScript so this will show 5 on the screen not `2 + 3`:
+        ```
+        ReactDOM.render(
+        <h1>{2 + 3}</h1>,
+        document.getElementById('app')
+        );
+        ```
+    * Object properties can be used as elements:
+        ```
+        const pics = {
+            panda: "http://bit.ly/1Tqltv5",
+            owl: "http://bit.ly/1XGtkM3",
+            owlCat: "http://bit.ly/1Upbczi"
+        }; 
+
+        const panda = (
+            <img 
+                src={pics.panda} 
+                alt="Lazy Panda" />
+        );
+        ```
