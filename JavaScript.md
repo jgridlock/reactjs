@@ -738,3 +738,15 @@
             }
             }
             ```
+        * Event listener
+            ```
+            class Button extends React.Component {
+                scream() {
+                    alert('AAAAAAAAHHH!!!!!');
+                }
+
+                render() {
+                    return <button onClick={this.scream}>Scare Me</button>;
+                }
+                }
+            ```
