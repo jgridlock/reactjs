@@ -608,3 +608,27 @@
             <ul>{liArray}</ul>
             ```
         * Key
+            * Lists need keys to stay ordered:
+                ```
+                <ul>
+                    <li key="li-01">Example1</li>
+                    <li key="li-02">Example2</li>
+                    <li key="li-03">Example3</li>
+                </ul>
+                
+                or
+
+                const peopleLis = people.map((person, i) =>
+                // expression goes here:
+                <li key={'person_' + i}>{person}</li>
+                );
+                ```
+        * NOTE: You can write JSX code in react like so:
+            ```
+            const h1 = React.createElement(
+                "h1",
+                null,
+                "Hello, world"
+            );
+            ```
+            
