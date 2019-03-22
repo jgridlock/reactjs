@@ -924,3 +924,18 @@
                     }
                 ```
             * IMPORT: Any time that you call this.setState(), this.setState() AUTOMATICALLY calls .render() as soon as the state has changed.
+            * bind - If you use `this` within an event handler you need to bind this in the constructor.
+                ```
+                class Random extends React.Component {
+                    constructor(props){
+                        super(props);
+                        this.state = { color: [0, 200, 255] }
+                        this.handleClick = this.handleClick.bind(this); //THIS
+                    }
+                    
+                    handleClick() {
+                        this.setState({ //THIS
+                        color: this.chooseColor()
+                        })
+                    }
+                ```
