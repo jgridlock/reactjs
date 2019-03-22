@@ -825,7 +825,7 @@
             document.getElementById('app')
             );
             ```
-        * Inport/export/instantiate
+        * Import/export/instantiate
             ```
             export class NavBar extends React.Component{ //export NavBar from js file
 
@@ -841,3 +841,86 @@
                 ```
                 this.props.whateverMyPropIs
                 ```
+            * Event handlers are methods. In this case talk is in the same file but if you wanted to access it from another file you would have to do a `this.props.talk`.
+                ```
+                class Talker extends React.Component {
+                    talk() {
+                        let speech = '';
+                        for (let i = 0; i < 10000; i++) {
+                        speech += 'blah ';
+                        }
+                        alert(speech);
+                    }
+                    
+                    render() {
+                        return <Button talk={this.talk}/>;
+                    }
+                    }
+                ```
+            * If a prop is expecting a variable but doesn't recieve anything you can create a default prop:
+                ```
+                class Button extends React.Component {
+                    render() {
+                        return (
+                        <button>
+                            {this.props.text}
+                        </button>
+                        );
+                    }
+                    }
+
+                    // defaultProps goes here:
+                    Button.defaultProps = { text: 'I am a button' };
+
+                    ReactDOM.render(
+                    <Button text=""/>, 
+                    document.getElementById('app')
+                    );
+                ```
+            * States are always equal to objects and they setup default properties for classes
+                ```
+                class App extends React.Component {
+                    // constructor method begins here:
+                    constructor(props){
+                    super(props);
+                    this.state = {
+                    title: 'Best App'
+                    }
+                }
+                    
+                render() {
+                    return (
+                    <h1>
+                        {this.state.title}
+                    </h1>
+                    );
+                }
+                }
+                ```
+            * Whenever you define an event handler that uses this, you need to add this.methodName = this.methodName.bind(this) to your constructor function.
+                ```
+                class Mood extends React.Component {
+                    constructor(props) {
+                        super(props);
+                        this.state = { mood: 'good' };
+                        this.toggleMood = this.toggleMood.bind(this);
+                    }
+
+                    toggleMood() {
+                        const newMood = this.state.mood == 'good' ? 'bad' : 'good';
+                        this.setState({ mood: newMood });
+                    }
+
+                    render() {
+                        return (
+                        <div>
+                            <h1>I'm feeling {this.state.mood}!</h1>
+                            <button onClick={this.toggleMood}>
+                            Click Me
+                            </button>
+                        </div>
+                        );
+                    }
+                    }
+                ```
+            * IMPORT: Any time that you call this.setState(), this.setState() AUTOMATICALLY calls .render() as soon as the state has changed.
